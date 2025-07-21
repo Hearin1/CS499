@@ -1,1 +1,46 @@
+const User = require('../models/user');
+const { hashPassword, verifyPassword } = require('../../util/encryption');
 
+const register = async (req, res) => {
+  try {
+    const hashed = await hashPassword(req.body.password);
+    const user = await User.create({
+      username: req.body.username,
+      hashedPassword: hashed,
+      email: req.body.email
+    });
+    res.status(201).json({ username: user.username, email: user.email });
+  } catch (err) {
+    res.status(400).json(err);
+  }
+};
+
+const login = async (req, res) => {
+  try {
+    const user = await User.findOne({ username: req.body.username });
+    if (!user) return res.status(401).json({ message: 'Invalid credentials' });
+
+    const match = await verifyPassword(req.body.password, user.hashedPassword);
+    if (!match) return res.status(401).json({ message: 'Invalid credentials' });
+
+    res.status(200).json({ message: 'Logged in' });
+  } catch (err) {
+    res.status(400).json(err);
+  }
+};
+
+const updateSettings = async (req, res) => {
+  try {
+    const user = await User.findOneAndUpdate(
+      { username: req.params.username },
+      { settings: req.body.settings },
+      { new: true }
+    );
+    if (!user) return res.status(404).json({ message: 'User not found' });
+    res.status(200).json(user);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+};
+
+module.exports = { register, login, updateSettings };
