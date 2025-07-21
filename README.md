@@ -32,3 +32,50 @@ The API endpoints are exposed under `/api/users` and include:
 
 These endpoints demonstrate how encrypted passwords and settings management can
 be integrated into the existing TRAVLR codebase.
+
+
+
+
+
+
+
+
+Summary of changes 7/20/2025:
+
+The current repository places the application under the TRAVLR directory. The top-level README.md merely states that the repository contains TRAVLR and mentions new encryption and account APIs.
+Inside TRAVLR, a more detailed README outlines how to run the server with npm install / npm start and describes the new encryption utility and account-setting routes.
+
+Key implementation files include:
+Encryption utility defining AES-based encryption plus password hashing helpers
+User model storing hashed passwords and user settings
+
+User controller with register, login and settings update endpoints
+User routes wired into the API router
+An additional folder named –force (note the leading dash) remains in the repository, containing a default Express scaffold. It does not appear to be used. And I will go through it in the next module. 
+
+Issues & Recommendations
+Extraneous directory
+The –force folder with an Express scaffold is checked into the repository, but it is unrelated to the TRAVLR codebase.
+This directory may confuse readers and should be removed from version control.
+
+future potential task
+Remove unused `–force` directory 
+
+
+Missing .gitignore:
+There is no .gitignore. Installing dependencies would create node_modules/ which could be accidentally committed. will Add .gitignore for Node project
+
+
+Incomplete project instructions:
+The TRAVLR README covers basic startup but omits setup requirements such as MongoDB and the optional DB_HOST environment variable seen in app_api/models/db.js.
+The root README also lacks context about these prerequisites.
+In future module, will Document environment requirements
+
+
+Security detail in encryption utility:
+util/encryption.js uses crypto.scryptSync(password, 'salt', 32) with a hard‑coded salt string, which weakens encryption.
+Improve encryption key generation
+Absence of licensing information
+
+
+The repository lacks a software license. Publishing an open-source project without a license leaves usage terms unclear. Will work in a future module to add an open-source license file
