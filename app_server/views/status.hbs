@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Status Checkpoints</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+  <div id="background">
+    <div id="page">
+      {{> header }}
+      <div id="contents">
+        <div class="box">
+          <div class="body">
+            <h1>Status Checkpoints</h1>
+            {{#if message}}
+            <p class="message">{{message}}</p>
+            {{/if}}
+            <table>
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Name of Artifact Used</th>
+                  <th>Status of Initial Enhancement</th>
+                  <th>Submission Status</th>
+                  <th>Status of Final Enhancement</th>
+                  <th>Uploaded to ePortfolio</th>
+                  <th>Status of Finalized ePortfolio</th>
+                </tr>
+              </thead>
+              <tbody>
+                {{#each statuses}}
+                <tr>
+                  <td>{{category}}</td>
+                  <td>{{artifact}}</td>
+                  <td>{{initialEnhancement}}</td>
+                  <td>{{submissionStatus}}</td>
+                  <td>{{finalEnhancement}}</td>
+                  <td>{{ePortfolioUploaded}}</td>
+                  <td>{{ePortfolioFinal}}</td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      {{> footer }}
+    </div>
+  </div>
+</body>
+</html>
