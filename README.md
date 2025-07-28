@@ -33,6 +33,10 @@ The API endpoints are exposed under `/api/users` and include:
 These endpoints demonstrate how encrypted passwords and settings management can
 be integrated into the existing TRAVLR codebase.
 
+### New in this revision
+
+- **Status Page** – Visit `/status` to view project checkpoint information loaded from `data/status.json`.
+- **Enhanced Encryption** – Additional helper functions in `util/encryption.js` provide per-user salts and optional admin bypass.
 
 
 
