@@ -1,0 +1,29 @@
+[
+  {
+    "category": "Software Design and Engineering",
+    "artifact": "CS405: Encryption and Decryption Tool",
+    "initialEnhancement": "Enhancement complete: Refactored for modularity, added error handling",
+    "submissionStatus": "Submitted in Milestone Two",
+    "finalEnhancement": "Final version tested, comments added",
+    "ePortfolioUploaded": "Yes",
+    "ePortfolioFinal": "Structure in place; self-assessment draft pending"
+  },
+  {
+    "category": "Algorithms and Data Structures",
+    "artifact": "CS410: Permission Access System",
+    "initialEnhancement": "Enhancement complete: Optimized permission validation logic",
+    "submissionStatus": "Submitted in Milestone Three",
+    "finalEnhancement": "Final version tested, benchmarked for performance",
+    "ePortfolioUploaded": "Yes",
+    "ePortfolioFinal": "Integrated in main navigation with detailed narrative"
+  },
+  {
+    "category": "Databases",
+    "artifact": "CS465: Travlr Getaways MEAN Stack Web Application",
+    "initialEnhancement": "Enhancement in progress: Adding reporting features and admin search",
+    "submissionStatus": "Milestone Four in progress",
+    "finalEnhancement": "Admin controls and filtering under development",
+    "ePortfolioUploaded": "Still working on implementation",
+    "ePortfolioFinal": "Final narrative and polish pending"
+  }
+]
