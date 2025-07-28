@@ -4,6 +4,7 @@ const router = express.Router(); //router logic
 //This is where we import the controllers we will route
 const tripsController = require('../controllers/trips');
 const usersRouter = require('./users');
+const statusRouter = require('./status');
 
 //define route for our trips endpoint
 router
@@ -18,5 +19,6 @@ router
     .put(tripsController.tripsUpdateTrip); //PUT Method Updates a Trip
 
 router.use('/users', usersRouter);
+router.use('/status', statusRouter);
 
 module.exports = router;
