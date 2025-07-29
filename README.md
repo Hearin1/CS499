@@ -82,4 +82,13 @@ Improve encryption key generation
 Absence of licensing information
 
 
-The repository lacks a software license. Publishing an open-source project without a license leaves usage terms unclear. Will work in a future module to add an open-source license file
+
+
+### New Enhancements 7/29/2025
+
+- Added user roles (admin and user) with optional admin code during registration.
+- Created dashboard endpoint `/api/users/:username/dashboard` returning
+  personalized status data. Admins see all categories while regular users
+  only see completed items.
+- Added front-end dashboard page available at `/users/dashboard/:username`.
+- Cleaned up files missing trailing newlines and fixed minor formatting.
