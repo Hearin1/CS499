@@ -1,4 +1,4 @@
-# CS465-Fullstack
+# CS465-Fullstack Artifact
 CS465 Full Stack Development with MEAN
 
 
@@ -92,3 +92,4 @@ Absence of licensing information
   only see completed items.
 - Added front-end dashboard page available at `/users/dashboard/:username`.
 - Cleaned up files missing trailing newlines and fixed minor formatting.
+
