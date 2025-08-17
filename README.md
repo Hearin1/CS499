@@ -38,7 +38,7 @@ The API endpoints are exposed under `/api/users` and include:
 These endpoints demonstrate how encrypted passwords and settings management can
 be integrated into the existing TRAVLR codebase.
 
-CS 499 Final Project Narrative
+## CS 499 Final Project Narrative
 
 This repository represents my final capstone work for CS 499: Computer Science Capstone at Southern New Hampshire University. The capstone project serves as the culmination of my Computer Science program and integrates the knowledge, skills, and techniques developed throughout multiple prior courses. The goal of this work was to select prior artifacts from my coursework, enhance them in meaningful ways, and present them in a professional ePortfolio that highlights my growth in three core categories of computer science: software design and engineering, algorithms and data structures, and databases.
 
