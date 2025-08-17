@@ -14,6 +14,7 @@ var apiRouter = require('./app_api/routes/index');
 
 var handlebars = require('hbs');
 
+
 //bring in the database 
 require('./app_api/models/db');
 
